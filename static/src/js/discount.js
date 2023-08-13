@@ -1,25 +1,37 @@
 odoo.define('pos_discount_auth.screens', function (require) {
     "use strict";
 
-    console.log("Helllllllo")
-    const DiscountButton = require("pos_discount.DiscountButton");
-    const Registries = require('point_of_sale.Registries');
-    // var PosBaseWidget = require('point_of_sale.BaseWidget');
-    // var screens = require('point_of_sale.screens');
+    //1- show pin widget
+    //2- match auth_code pin with user input pin
+    //3- do discount action
 
-    class AuthDiscountButton extends DiscountButton{
-        setup(){
-            super.setup()
-        }
-        async onClick(){
-            console.log("Hello Discount button!")
-            super.onClick()
-        }
 
-    }
-    AuthDiscountButton.template = 'pos_discount.DiscountButton';
-    Registries.Component.add(AuthDiscountButton);
-    return AuthDiscountButton;
+
+
+
+
+
+
+
+    // console.log("Helllllllo")
+    // const DiscountButton = require("pos_discount.DiscountButton");
+    // const Registries = require('point_of_sale.Registries');
+    // // var PosBaseWidget = require('point_of_sale.BaseWidget');
+    // // var screens = require('point_of_sale.screens');
+    //
+    // class AuthDiscountButton extends DiscountButton{
+    //     setup(){
+    //         super.setup()
+    //     }
+    //     async onClick(){
+    //         console.log("Hello Discount button!")
+    //         super.onClick()
+    //     }
+    //
+    // }
+    // AuthDiscountButton.template = 'pos_discount.DiscountButton';
+    // Registries.Component.add(AuthDiscountButton);
+    // return AuthDiscountButton;
     // PosBaseWidget.include({
     //     init:function(parent,options){
     //         var self = this;

@@ -15,13 +15,15 @@
     "data": [
         'views/pos_config_view.xml',
     ],
-'assets': {
+    'assets': {
         'point_of_sale.assets':[
             'pos_discount_auth/static/src/js/config.js',
-            'pos_discount_auth/static/src/js/discount.js'
+            'pos_discount_auth/static/src/js/discount.js',
+            'pos_discount_auth/static/src/js/Popups/DiscountAuthPopup.js',
+            'pos_discount_auth/static/src/js/Screens/ProductScreen/CustomNumpadWidget.js',
+            'pos_discount_auth/static/src/xml/Popups/DiscountAuthPopup.xml'
         ]
     },
-    "qweb": ['static/src/xml/pos_code_view.xml'],
     'images': ['static/description/thumbnail.png',
                 'static/description/banner_discount.png',
                'static/description/code_screen.png',
