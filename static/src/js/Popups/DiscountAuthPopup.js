@@ -4,13 +4,14 @@ odoo.define('pos_discount_auth.DiscountAuthPopup', function (require) {
     const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
     const Registries = require('point_of_sale.Registries');
     const { _t } = require('web.core');
-    const ajax  = require("web.ajax");
+    const ajax = require("web.ajax");
+    // const {useService } = require("web.core.utils.hooks");
 
    const { useRef, useState } = owl;
     class DiscountAuthPopup extends AbstractAwaitablePopup {
         setup() {
             super.setup();
-
+            // this.rpc = useService("rpc");
             this.state = useState({
                 authCode: '',
                 errorMessage: "",
@@ -32,13 +33,18 @@ odoo.define('pos_discount_auth.DiscountAuthPopup', function (require) {
                 return;
             }
 
-            //Make Http request to user
-            const resultPromise = await ajax.rpc("/pos_discount_auth_code", {"cashier_auth_code": this.state.authCode})
-            const result = await resultPromise;
-            console.log("Auth Result: ", resultPromise, "Result", result)
-            if(result.authenticated){
+
+            const {authenticated} = await ajax.jsonRpc(
+                "/pos_discount_auth_code",
+                "call",
+                { cashier_auth_code: this.state.authCode }
+            );
+
+            // const {authenticated} = await this.rpc("/pos_discount_auth_code", { cashier_auth_code: this.state.authCode });
+
+            if (authenticated) {
                 this.state.inputHasError = false;
-            }else{
+            } else {
                 this.state.inputHasError = true;
                 this.state.errorMessage = this.env._t("Auth Code Not correct!");
                 return;
@@ -48,7 +54,6 @@ odoo.define('pos_discount_auth.DiscountAuthPopup', function (require) {
         }
 
         cancel(){
-            console.log("Confirm work fine!")
             return super.cancel();
         }
 

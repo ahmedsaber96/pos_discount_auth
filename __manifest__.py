@@ -17,8 +17,6 @@
     ],
     'assets': {
         'point_of_sale.assets':[
-            'pos_discount_auth/static/src/js/config.js',
-            'pos_discount_auth/static/src/js/discount.js',
             'pos_discount_auth/static/src/js/Popups/DiscountAuthPopup.js',
             'pos_discount_auth/static/src/js/Screens/ProductScreen/CustomNumpadWidget.js',
             'pos_discount_auth/static/src/xml/Popups/DiscountAuthPopup.xml'

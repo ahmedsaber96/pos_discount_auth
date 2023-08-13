@@ -9,19 +9,11 @@
                  <div>
                      <div class="input-field">
                          <input type="password" name="auth-code" t-model="state.authCode" t-ref="input-auth-code-ref"/>
-<!--                         TODO::- Show Password -->
-<!--                         <t t-if="env.pos.currency.symbol.length > 1">-->
-<!--                             <span class="left-currency" t-esc="env.pos.currency.symbol" />-->
-<!--                         </t>-->
-<!--                         <t t-else="">-->
-<!--                             <span class="currency" t-esc="env.pos.currency.symbol" />-->
-<!--                         </t>-->
                      </div>
 
                      <span t-if="state.inputHasError" class="error-message">
                                 <t t-esc="state.errorMessage" />
                      </span>
-                     <!--                            <input type="text" t-esc="widget.options.config.authorized_code" class="popup-input input"/>-->
                      <div class="footer">
                             <div class="button confirm" t-on-click="confirm">
                                 OK

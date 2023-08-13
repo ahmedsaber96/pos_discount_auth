@@ -7,8 +7,6 @@
         <field name="arch" type="xml">
             <xpath expr="//div[@id='pos_pricing_section']"
                    position="inside">
-                [3:32 PM] Okba Cemuz
-
                 <div class="col-12 col-lg-6 o_setting_box price_control" title="Only users with Manager access rights for PoS app can modify the product prices on orders.">
 
                     <div class="o_setting_left_pane">
@@ -28,10 +26,6 @@
                     </div>
 
                 </div>
-
-
-
-
             </xpath>
 
         </field>
