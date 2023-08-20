@@ -11,7 +11,6 @@ odoo.define('pos_discount_auth.DiscountAuthPopup', function (require) {
     class DiscountAuthPopup extends AbstractAwaitablePopup {
         setup() {
             super.setup();
-            // this.rpc = useService("rpc");
             this.state = useState({
                 authCode: '',
                 errorMessage: "",
@@ -69,7 +68,7 @@ odoo.define('pos_discount_auth.DiscountAuthPopup', function (require) {
     DiscountAuthPopup.template =  "pos_discount_auth.DiscountAuthPopup";
     DiscountAuthPopup.defaultProps = {
         cancelText: _t('Cancel'),
-        title: _t('Cash In/Out'),
+        title: _t('Authorization Code'),
     };
         Registries.Component.add(DiscountAuthPopup);
         return DiscountAuthPopup;

@@ -4,27 +4,24 @@
          <t t-name="pos_discount_auth.DiscountAuthPopup" owl="1">
              <div class="modal-dialog">
              <div class="popup popup-textinput">
-                        <p class="title">Input authorized code</p>
-                 <hr/>
+                 <p class="title">Input authorized code</p>
                  <div>
                      <div class="input-field">
                          <input type="password" name="auth-code" t-model="state.authCode" t-ref="input-auth-code-ref"/>
                      </div>
-
                      <span t-if="state.inputHasError" class="error-message">
                                 <t t-esc="state.errorMessage" />
                      </span>
                      <div class="footer">
-                            <div class="button confirm" t-on-click="confirm">
-                                OK
-                            </div>
+                         <div class="button cancel" t-on-click="confirm">
+                                ok
+                         </div>
                          <div class="button cancel" t-on-click="cancel">
                                 Cancel
-                            </div>
-                        </div>
-                    </div>
+                         </div>
+                     </div>
+                 </div>
                 </div>
              </div>
          </t>
-
-    </templates>
+</templates>

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    "name": """POS discount authorization code""",
+    "name": """POS discount authorization""",
     "summary": """Provides authorization code for discounts in POS""",
-    "category": "Point of Sale",
-    "version": "16.0.0",
+    "category": "Sales/POS discount authorization",
+    "version": "16.0.0.1.0.0",
     "author": "Ahmed Saber",
     "support": "developersaber@gmail.com",
     "website": "http://developersaber.com",
@@ -22,13 +22,14 @@
             'pos_discount_auth/static/src/xml/Popups/DiscountAuthPopup.xml'
         ]
     },
-    'images': ['static/description/thumbnail.png',
-                'static/description/banner_discount.png',
+    'images': [
+               'static/description/thumbnail.png',
+               'static/description/banner_discount.png',
                'static/description/code_screen.png',
                'static/description/discount.png',
                'static/description/discount_settings.png',
                'static/description/icon.png',],
     "auto_install": False,
     "installable": True,
-    "application": False,
+    "application": True,
 }
